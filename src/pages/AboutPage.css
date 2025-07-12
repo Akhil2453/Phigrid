@@ -1,0 +1,298 @@
+
+/* Global Styles */
+.about-page {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+/* Header */
+header {
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+.logo img {
+  height: 80px;
+}
+/* Hamburger menu icon (mobile only) */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #333;
+}
+/* Navigation links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+.nav-links li {
+  margin: 0 15px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+.contact-btn {
+  background: #ff9800;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+/* Section Styling */
+#about {
+  padding: 60px 20px;
+  text-align: left;
+  margin-top: 80px;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+h2,
+h3 {
+  color: #0b1c3f; /* Deep Blue for headings */
+  font-weight: bold;
+}
+h2 i,
+h3 i {
+  margin-right: 10px;
+  color: #b45309; /* Gold for icons */
+}
+.tagline {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #b45309; /* Gold */
+  text-align: center;
+  margin-bottom: 30px;
+}
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Lines */
+.solid-line {
+  border: none;
+  border-top: 3px solid #0b1c3f;
+  margin: 30px 0;
+}
+.dotted-line {
+  border: none;
+  border-top: 2px dashed #b45309;
+  margin: 25px 0;
+}
+
+/* Highlighted Words */
+.highlight {
+  background-color: #b45309;
+  padding: 3px 8px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+.expertise {
+  text-align: center;
+  background: #fff;
+}
+
+.expertise-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.expertise-box {
+  background: white;
+  padding: 15px;
+  border: 2px solid #b45309;
+  border-radius: 8px;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.expertise-box:hover {
+  transform: scale(1.05);
+}
+
+.expertise-box  {
+  font-size: 40px;
+  color: #b45309;
+}
+/* UGC Quadrant */
+.ugc-approach {
+  background-color: #0b1c3f;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.quadrants {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.quadrant {
+  background: white;
+  color: #0b1c3f;
+  padding: 15px;
+  border-radius: 8px;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.quadrant:hover {
+  transform: scale(1.05);
+}
+
+.quadrant i {
+  font-size: 40px;
+  color: #b45309;
+}
+.sme-list {
+  max-width: 800px;
+  margin: auto;
+  text-align: left;
+  padding: 20px;
+}
+
+.sme-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sme-list li {
+  font-size: 1.1em;
+  margin: 10px 0;
+}
+
+.sme-list i {
+  color: #b45309;
+  margin-right: 10px;
+}
+
+/* Footer */
+footer {
+  background: #0b1c3f;
+  color: #d1d5db;
+  padding: 40px 20px;
+}
+.footer-container {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .footer-container {
+    grid-template-columns: repeat(4, 1fr);
+    text-align: left;
+  }
+}
+.footer-container img {
+  width: 200px;
+  margin-bottom: 8px;
+}
+.footer-container h3 {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #fff;
+}
+.footer-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-container ul li {
+  margin-bottom: 4px;
+}
+.footer-container ul li a {
+  text-decoration: none;
+  color: #d1d5db;
+  transition: color 0.3s ease;
+}
+.footer-container ul li a:hover {
+  color: #f59e0b;
+}
+/* Responsive Adjustments for Mobile (≤767px) */
+@media (max-width: 767px) {
+  /* Stack grid-two layout to single column */
+  .grid-two {
+    grid-template-columns: 1fr;
+  }
+  /* Stack navigation items vertically & hide nav by default */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    width: 250px;
+    background: #f5f1e6;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 60px 20px;
+    gap: 20px;
+    transition: right 0.3s ease;
+    z-index: 1500;
+  }
+  /* When active, slide in the menu */
+  .nav-links.active {
+    right: 0;
+  }
+  /* Show hamburger icon */
+  .hamburger {
+    display: block;
+  }
+  /* Add a close button inside nav */
+  .nav-links .nav-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: block;
+  }
+}
+/* Desktop overrides to ensure mobile-only elements are hidden */
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+  .nav-links {
+    position: static;
+    flex-direction: row;
+    padding: 0;
+    gap: 15px;
+  }
+  .nav-links .nav-close {
+    display: none;
+  }
+}
